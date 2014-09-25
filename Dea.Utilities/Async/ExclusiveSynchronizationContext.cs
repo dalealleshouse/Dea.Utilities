@@ -20,17 +20,17 @@ namespace Dea.Utilities.Async
 
         private bool _done;
 
+        ~ExclusiveSynchronizationContext()
+        {
+            this.Dispose(false);
+        }
+
         public Exception InnerException { get; set; }
 
         public void Dispose()
         {
             this.Dispose(true);
             GC.SuppressFinalize(this);
-        }
-
-        ~ExclusiveSynchronizationContext()
-        {
-            this.Dispose(false);
         }
 
         public override void Send(SendOrPostCallback d, object state)

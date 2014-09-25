@@ -12,10 +12,12 @@ namespace Dea.Utilities.Tests.Testing.SutBuilder
 
     public class TestTypeWithNonInterfaceArgument
     {
-        [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields",
+            Justification = "Test Code")]
         private readonly TestType _testType;
 
-        [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields",
+            Justification = "Test Code")]
         private readonly ITestType _testType2;
 
         public TestTypeWithNonInterfaceArgument(TestType testType, ITestType testType2)

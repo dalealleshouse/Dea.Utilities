@@ -12,7 +12,8 @@ namespace Dea.Utilities.Tests.Testing.SutBuilder
 
     public class TestTypeWithMultipleConstructors
     {
-        [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields",
+            Justification = "Test Code")]
         private readonly ITestType _testType;
 
         public TestTypeWithMultipleConstructors()
