@@ -13,9 +13,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Dea.Utilities")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Utilities I need for almost every project")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("dalealleshouse@gmail.com")]
 [assembly: AssemblyProduct("Dea.Utilities")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
