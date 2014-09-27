@@ -1,7 +1,7 @@
 1) Update Dea.Utilities.nuspec with change details
 2) Make sure nuget.exe is in the command path
 3) Open command prompt at the Dea.Utilities project path
-4) nuget pack
-5) nuget pack symbols
+4) nuget pack -Prop Configuration=Release
+5) nuget pack -Prop Configuration=Release -symbols
 6) nuget setapikey ******
 7) nuget push Dea.Utilities.V.V.V.V.nupkg

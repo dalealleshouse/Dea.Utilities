@@ -50,6 +50,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetTestHelper">
+      <HintPath>..\packages\DotNetTestHelper.1.0.5383.25555\lib\net45\DotNetTestHelper.dll</HintPath>
+    </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
     </Reference>
@@ -77,15 +80,6 @@
     <Compile Include="Reflection\TypeTestClasses\ITestType.cs" />
     <Compile Include="Reflection\TypeTestClasses\TestType.cs" />
     <Compile Include="Reflection\TypeTestClasses\TypeWithConstructorArgs.cs" />
-    <Compile Include="Testing\SutBuilder\ITestType.cs" />
-    <Compile Include="Testing\SutBuilder\ITestType2.cs" />
-    <Compile Include="Testing\SutBuilder\SutBuilderShould.cs" />
-    <Compile Include="Testing\SutBuilder\TestType.cs" />
-    <Compile Include="Testing\SutBuilder\TestType2.cs" />
-    <Compile Include="Testing\SutBuilder\TestTypeWithConstructorArguments.cs" />
-    <Compile Include="Testing\SutBuilder\TestTypeWithMultipleConstructors.cs" />
-    <Compile Include="Testing\SutBuilder\TestTypeWithNonInterfaceArgument.cs" />
-    <Compile Include="Testing\SutBuilder\TestTypeWithSameArguments.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dea.Utilities\Dea.Utilities.csproj">

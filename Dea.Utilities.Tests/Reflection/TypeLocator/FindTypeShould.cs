@@ -9,8 +9,9 @@
 namespace Dea.Utilities.Tests.Reflection.TypeLocator
 {
     using Dea.Utilities.Reflection;
-    using Dea.Utilities.Testing;
     using Dea.Utilities.Tests.Reflection.TypeTestClasses;
+
+    using DotNetTestHelper;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 

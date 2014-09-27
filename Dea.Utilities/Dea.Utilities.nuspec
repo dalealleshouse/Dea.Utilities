@@ -10,8 +10,8 @@
     <projectUrl>https://github.com/dalealleshouse/Dea.Utilities</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial project creation.</releaseNotes>
+    <releaseNotes>Removed testing classes so this package does not have to depend on Moq. Those classes are now in a project named DotNetTestHelpers</releaseNotes>
     <copyright>Copyright 2014</copyright>
-    <tags>Utilities Reflection Async Mock Testing</tags>
+    <tags>Utilities Reflection Async</tags>
   </metadata>
 </package>
