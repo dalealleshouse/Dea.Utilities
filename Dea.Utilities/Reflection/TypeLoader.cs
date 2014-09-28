@@ -28,26 +28,11 @@ namespace Dea.Utilities.Reflection
             this._typeLocator = typeLocator;
         }
 
-        public T LoadType(string typeName)
-        {
-            var type = this._typeLocator.FindType(typeName);
-
-            var result = Activator.CreateInstance(type) as T;
-
-            if (result == null)
-            {
-                throw new InvalidCastException(
-                    string.Format(CultureInfo.InvariantCulture, @"Unable to cast to the specifed type. Name: {0}, Type: {1}", typeName, typeof(T)));
-            }
-
-            return result;
-        }
-
-        public T LoadTypeWithConstructorArguments(string typeName, params object[] constructorArgs)
+        public T LoadType(string typeName, params object[] constructorArgs)
         {
             if (constructorArgs == null)
             {
-                return this.LoadType(typeName);
+                constructorArgs = new object[0];
             }
 
             var type = this._typeLocator.FindType(typeName);

@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/dalealleshouse/Dea.Utilities</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Removed testing classes so this package does not have to depend on Moq. Those classes are now in a project named DotNetTestHelpers</releaseNotes>
+    <releaseNotes>Changed the interface of TypeLoader, there is no need for LoadTypeWithConstructorArguments because args is params</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>Utilities Reflection Async</tags>
   </metadata>

@@ -73,7 +73,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\TypeLoader\LoadTypeShould.cs" />
-    <Compile Include="Reflection\TypeLoader\LoadTypeWithConstructorArgumentsShould.cs" />
     <Compile Include="Reflection\TypeLoader\SutFactory.cs" />
     <Compile Include="Reflection\TypeLocator\FindTypeShould.cs" />
     <Compile Include="Reflection\TypeTestClasses\AnotherTestType.cs" />

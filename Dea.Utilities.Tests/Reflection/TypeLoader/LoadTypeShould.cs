@@ -18,16 +18,6 @@ namespace Dea.Utilities.Tests.Reflection.TypeLoader
     [TestClass]
     public class LoadTypeShould
     {
-        [TestMethod]
-        public void LoadSpecifedType()
-        {
-            var sut = new SutFactory<ITestType>().Build();
-
-            var result = sut.LoadType("TestType");
-            Assert.IsInstanceOfType(result, typeof(ITestType));
-            Assert.IsInstanceOfType(result, typeof(TestType));
-        }
-
         [ExpectedException(typeof(TypeNotFoundException))]
         [TestMethod]
         public void ThrowIfClassNotFound()
@@ -42,6 +32,57 @@ namespace Dea.Utilities.Tests.Reflection.TypeLoader
         {
             var sut = new SutFactory<ITestType>().Build();
             sut.LoadType("AnotherTestType");
+        }
+
+        [ExpectedException(typeof(ConstructorNotFoundException))]
+        [TestMethod]
+        public void ThrowIfConstructorNotFound()
+        {
+            var sut = new SutFactory<ITestType>().Build();
+            sut.LoadType("TestType", "an argument");
+        }
+
+        [TestMethod]
+        public void LoadSpecifedType()
+        {
+            var sut = new SutFactory<ITestType>().Build();
+
+            var result = sut.LoadType("TestType");
+            Assert.IsInstanceOfType(result, typeof(ITestType));
+            Assert.IsInstanceOfType(result, typeof(TestType));
+        }
+
+        [TestMethod]
+        public void LoadIfParamsIsNull()
+        {
+            var sut = new SutFactory<ITestType>().Build();
+
+            var result = sut.LoadType("TestType", null);
+            Assert.IsInstanceOfType(result, typeof(ITestType));
+            Assert.IsInstanceOfType(result, typeof(TestType));
+        }
+
+        [TestMethod]
+        public void LoadTypeWithConstructorArgs()
+        {
+            const string Expected = "Argument One";
+            const string Expected2 = "Argument Two";
+            var sut = new SutFactory<TypeWithConstructorArgs>().Build();
+
+            var result = sut.LoadType("TypeWithConstructorArgs", Expected, Expected2);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(Expected, result.Arg);
+            Assert.AreEqual(Expected2, result.Arg2);
+        }
+
+        [TestMethod]
+        public void LoadTypeWithNoArguments()
+        {
+            var sut = new SutFactory<ITestType>().Build();
+
+            var result = sut.LoadType("TestType");
+            Assert.IsInstanceOfType(result, typeof(ITestType));
+            Assert.IsInstanceOfType(result, typeof(TestType));
         }
     }
 }

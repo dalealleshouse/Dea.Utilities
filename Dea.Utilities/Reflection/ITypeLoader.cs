@@ -11,8 +11,6 @@ namespace Dea.Utilities.Reflection
     public interface ITypeLoader<T>
         where T : class
     {
-        T LoadType(string typeName);
-
-        T LoadTypeWithConstructorArguments(string typeName, params object[] constructorArgs);
+        T LoadType(string typeName, params object[] constructorArgs);
     }
 }
